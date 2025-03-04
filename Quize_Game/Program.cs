@@ -33,12 +33,12 @@ namespace Quize_Game
                     bool result = CheckAnswer(userAnswer, answers[i]);
                     if (result == true)
                     {
-                        Console.WriteLine("Correct Answer✔️.");
+                        Console.WriteLine("\nCorrect Answer✔️.\n");
                         score++;
                     }
                     else
                     {
-                        Console.WriteLine($"Sorry‼️, Incorrect Answer, The Correct Answer IS: {answers[i]}. ");
+                        Console.WriteLine($"\nSorry‼️, Incorrect Answer, The Correct Answer IS: {answers[i]}.\n");
                     }
                 }
                 catch (Exception ex)
@@ -49,22 +49,22 @@ namespace Quize_Game
             }
             if (index - score == 0)
             {
-                Console.WriteLine($"Your Score IS: {score}🥇🏆, Congratulations.");
+                Console.WriteLine($"\nYour Score IS: {score}🥇🏆, Congratulations.\n");
             }
             else if (index - score == 1)
             {
-                Console.WriteLine($"Your Score IS: {score}🥈.");
+                Console.WriteLine($"\nYour Score IS: {score}🥈.\n");
 
             }
 
             else if (index - score == 2)
             {
-                Console.WriteLine($"Your Score IS: {score}🥉.");
+                Console.WriteLine($"\nYour Score IS: {score}🥉.\n");
 
             }
             else
             {
-                Console.WriteLine($"Your Score IS: {score}😔, Good Luke In The Next Game.");
+                Console.WriteLine($"\nYour Score IS: {score}😔, Good Luke In The Next Game.\n");
 
             }
             Console.ReadKey();
@@ -74,7 +74,7 @@ namespace Quize_Game
         {
             if (string.IsNullOrEmpty(userInput))
             {
-                throw new Exception("Answer Can't Be Empty!");
+                throw new Exception("Answer Can't Be Empty!.\n");
             };
             if (userInput == correctAnswer)
             {
